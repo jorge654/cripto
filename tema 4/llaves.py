@@ -24,15 +24,7 @@ def generar_privada(ruta):
 		encoding=serialization.Encoding.PEM,
 		format=serialization.PrivateFormat.TraditionalOpenSSL,
 		encryption_algorithm=serialization.NoEncryption())
-	#print(private_key_bytes)
-
-	# Convertir la llave privada de bytes a objeto llave
-	# Como no se cifraron los bytes no hace falta un password
-	#private_key = serialization.load_pem_private_key(
-		#private_key_bytes,
-		#backend=default_backend(),
-		#password=None)
-	#print(private_key_pem)
+	
 	guardar_archivo(ruta, private_key_bytes, "privada")
 	return private_key
 
